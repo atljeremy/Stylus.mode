@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+  <template>template.styl</template>   <!-- Provide a template for File->new -->
+  <recognition>
+    <extension>styl</extension>                   <!-- Add file extensions -->
+    <extension casesensitive="no">styl</extension> <!-- Add case sensitive file extensions -->
+    <filename>StylusFile</filename>
+  </recognition>
+</settings>

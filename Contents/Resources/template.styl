@@ -1,0 +1,146 @@
+// color manipulation
+
+body
+  color darken(#eee, 50)
+  color darken(#eee, 50%)
+  color #eee - rgba(100,0,0,0.5)
+  color rgba(#eee,.5)
+
+// expression node access
+
+body
+  list = (one 1) (two 2) (three 3)
+  foo last(list)
+
+// pseudo hashes
+
+get(hash, key)
+  return pair[1] if pair[0] == key for pair in hash
+
+body
+  hash = (one 1) (two 2) (three 3)
+  foo get(hash, two)
+  foo get(hash, one)
+  foo get(hash, none) == null
+  foo length(hash)
+
+// color components
+
+body
+  foo red(#c00)
+  foo lightness(#c00)
+
+// units
+
+body
+  foo unit(15%)
+  foo unit(15%, px)
+  foo unit(15px, '%')
+
+// math
+
+body
+  foo abs(-5)
+  foo sum(1 2 3 4)
+  foo avg(1 2 3 4)
+
+// literals
+
+body
+  foo unquote('X::MessedUp::IE.crap(here)')
+
+// inspection
+
+p(1 + 5 / 10)
+
+// replace str with val
+
+replace(expr, str, val)
+  expr = clone(expr)
+  for e, i in expr
+    if str == e
+      expr[i] = val
+  expr
+
+// normalize gradient point (webkit)
+
+grad-point(pos)
+  if length(pos) == 1
+    return left pos if pos in (top bottom)
+    return pos top if pos in (left right)
+  else if pos[0] in (top bottom)
+    pos[1] pos[0]
+  else
+    pos
+
+// implicit color stop position
+
+pos-in-stops(i, stops)
+  len = length(stops)
+  if len - 1 == i
+    100%
+  else if i
+    unit(i / len * 100, '%')
+  else
+    0%
+
+// normalize color stops
+//   - (color pos) -> (pos color)
+//   - (color) -> (implied-pos color)
+
+normalize-stops(stops)
+  stops = clone(stops)
+  for stop, i in stops
+    if length(stop) == 1
+      color = stop[0]
+      stop[0] = pos-in-stops(i, stops)
+      stop[1] = color
+    else if typeof(stop[1]) == 'unit'
+      pos = stop[1]
+      stop[1] = stop[0]
+      stop[0] = pos
+  stops
+
+// join color stops with the given translation function
+
+join-stops(stops, translate)
+  str = ''
+  len = length(stops)
+  for stop, i in stops
+    str += ', ' if i
+    pos = stop[0]
+    color = stop[1]
+    str += translate(color, pos)
+  unquote(str)
+
+// webkit translation function
+
+webkit-stop(color, pos)
+  s('color-stop(%d, %s)', pos / 100, color)
+
+// mozilla translation function
+
+moz-stop(color, pos)
+  s('%s %s', color, pos)
+
+// create a linear gradient with the given start
+// position, followed by color stops
+
+linear-gradient(start, stops...)
+  error('color stops required') unless length(stops)
+  prop = current-property[0]
+  val = current-property[1]
+  stops = normalize-stops(stops)
+
+  // webkit
+  end = grad-point(opposite-position(start))
+  webkit = s('-webkit-gradient(linear, %s, %s, %s)', grad-point(start), end, join-stops(stops, webkit-stop))
+  add-property(prop, replace(val, '__CALL__', webkit))
+
+  // moz
+  stops = join-stops(stops, moz-stop)
+  moz = s('-moz-linear-gradient(%s, %s)', start, stops)
+  add-property(prop, replace(val, '__CALL__', moz))
+
+  // literal
+  s('linear-gradient(%s, %s)', start, stops)
