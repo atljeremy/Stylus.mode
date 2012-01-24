@@ -11,7 +11,7 @@
     <states>
         <default id="Base" color="#000" background-color="#fff" font-weight="normal" font-style="normal">
         
-            <keywords id="HTML Selectors" color="#a035a7" font-weight="bold" useforautocomplete="yes" casesensitive="no">
+            <keywords id="HTML Selectors" color="#200274" font-weight="bold" useforautocomplete="yes" casesensitive="no">
                 <!-- HTML Elements -->
                 <string>a</string>
                 <string>abbr</string>
@@ -96,193 +96,12 @@
                 <string>ul</string>
                 <string>var</string>
             </keywords>
-
-        
-            <state id="Inside curly brackets" color="#000" background-color="#fff" font-weight="normal" font-style="normal">
-                <begin>
-                    <string>{</string>
-                </begin>
-                <end>
-                    <regex>}</regex>
-                </end>
-                <keywords id="CSS Keywords" color="#0f0" font-style="normal" useforautocomplete="yes">
-
-                    <regex>(?&lt;![\d\w])(?i)(_background)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(_filter)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(-webkit(?:-\w+)+)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(-khtml(?:-\w+)+)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(-moz(?:-\w+)+)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(-o(?:-\w+)+)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(-ms(?:-\w+)+)</regex>
-
-                    <regex>(?&lt;![\d\w])(?i)(accelerator)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(alignment(?:-[\w]+)+)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(animation(?:-[\w]+)*)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(appearance)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(azimuth)</regex>
-           	        <regex>(?&lt;![\d\w])(?i)(background(?:-[\w]+)*)</regex>
-<!-- STUDIO
-                    <regex>(?&lt;![\d\w])(?i)(background-attachment)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(background-color)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(background-image)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(background-position-x)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(background-position-y)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(background-position)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(background-repeat)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(background)</regex>
--->
-<!-- STUDIO
-                    <regex>(?&lt;![\d\w])(?i)(border-bottom-color)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(border-bottom-style)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(border-bottom-width)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(border-bottom)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(border-collapse)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(border-color)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(border-left-color)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(border-left-style)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(border-left-width)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(border-left)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(border-right-color)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(border-right-style)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(border-right-width)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(border-right)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(border-spacing)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(border-style)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(border-top-color)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(border-top-style)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(border-top-width)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(border-top)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(border-width)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(border)</regex>
--->
-                    <regex>(?&lt;![\d\w])(?i)(backface-visibility)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(baseline-shift)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(behavior)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(binding)</regex>
-           	        <regex>(?&lt;![\d\w])(?i)(bookmark(?:-[\w]+)+)</regex>
-           	        <regex>(?&lt;![\d\w])(?i)(border(?:-[\w]+)*)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(bottom)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(box-[\w]*)</regex>                    
-                    <regex>(?&lt;![\d\w])(?i)(caption-side)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(clear)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(clip)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(color(?:-[\w]+)*)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(column(?:-[\w]+)+)</regex>                    
-                    <regex>(?&lt;![\d\w])(?i)(columns)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(content)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(counter-increment)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(counter-reset)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(crop)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(cue-after)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(cue-before)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(cue)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(cursor)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(direction)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(display(?:-[\w]+)*)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(dominant-baseline)</regex>                    
-                    <regex>(?&lt;![\d\w])(?i)(drop-initial(?:-[\w]+)+)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(elevation)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(empty-cells)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(fit(?:-[\w]+)*)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(filter)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(float(?:-[\w]+)*)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(font(?:-[\w]+)*)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(grid(?:-[\w]+)+)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(group-reset)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(hanging-puctuation)</regex>                    
-                    <regex>(?&lt;![\d\w])(?i)(height)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(hyphenate(?:-[\w]+)+)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(hyphens)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(icons)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(image(?:-[\w]+)+)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(ime-mode)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(include-source)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(inline-box-align)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(key-equivalent)</regex>                    
-                    <regex>(?&lt;![\d\w])(?i)(konq_bgpos_x)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(konq_bgpos_y)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(layer-background-color)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(layer-background-image)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(layout(?:-[\w]+)+)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(left)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(letter-spacing)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(line(?:-[\w]+)+)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(list-style(?:-[\w]+)*)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(margin(?:-[\w]+)*)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(mark(?:-[\w]+)*)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(marks)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(marker-offset)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(marquee(?:-[\w]+)+)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(max-height)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(max-width)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(min-height)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(min-width)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(move-to)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(nav(?:-[\w]+)+)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(opacity)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(orphans)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(outline(?:-[\w]+)*)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(overflow-x)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(overflow-y)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(overflow)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(padding-bottom)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(padding-left)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(padding-right)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(padding-top)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(padding)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(page(?:-[\w]+)*)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(pause-after)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(pause-before)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(pause)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(phonemes)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(pitch-range)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(pitch)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(play-during)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(pointer-events)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(position)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(presentation-level)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(punctuation-trim)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(perspective(?:-[\w]+)*)</regex>                    
-                    <regex>(?&lt;![\d\w])(?i)(quotes)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(rendering-indent)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(resize)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(rest(?:-[\w]+)*)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(richness)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(right)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(rotation(?:-[\w]+)*)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(ruby(?:-[\w]+)+)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(scrollbar(?:-[\w]+)+)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(size)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(speak-header)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(speak-numeral)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(speak-punctuation)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(speak)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(speech-rate)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(stress)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(string-set)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(tab-side)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(tab-index)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(table-layout)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(text(?:-[\w]+)+)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(toggle-group)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(top)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(transition(?:-[\w]+)*)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(transform(?:-[\w]+)*)</regex>                    
-                    <regex>(?&lt;![\d\w])(?i)(unicode-bidi)</regex>
-                   	<regex>(?&lt;![\d\w])(?i)(unicode-range)</regex>
-                   	<regex>(?&lt;![\d\w])(?i)(user(?:-[\w]+)+)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(vertical-align)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(visibility)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(voice(?:-[\w]+)+)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(volume)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(white-space)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(widows)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(width)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(word(?:-[\w]+)+)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(writing-mode)</regex>
-                	  <regex>(?&lt;![\d\w])(?i)(zoom)</regex>
-                    <regex>(?&lt;![\d\w])(?i)(z-index)</regex>
-                </keywords>
+            
+            
+            
+            
+            
+            <!--
                 <state id="Attribute state" color="#f00" font-weight="normal" font-style="normal">
                     <begin>
                         <regex>(?:(?:_background)\s)|(?:(?:_filter)\s)|(?:(?:-webkit(?:-\w+)+)\s)|(?:(?:-khtml(?:-\w+)+)\s)|(?:(?:-moz(?:-\w+)+)\s)|(?:(?:-o(?:-\w+)+)\s)|(?:(?:-ms(?:-\w+)+)\s)|(?:(?:accelerator)\s)|(?:(?:alignment(?:-[\w]+)+)\s)|(?:(?:animation(?:-[\w]+)*)\s)|(?:(?:appearance)\s)|(?:(?:azimuth)\s)|(?:(?:background(?:-[\w]+)*)\s)|(?:(?:backface-visibility)\s)|(?:(?:baseline-shift)\s)|(?:(?:behavior)\s)|(?:(?:binding)\s)|(?:(?:bookmark(?:-[\w]+)+)\s)|(?:(?:border(?:-[\w]+)*)\s)|(?:(?:bottom)\s)|(?:(?:box-[\w]*)\s)|(?:(?:caption-side)\s)|(?:(?:clear)\s)|(?:(?:clip)\s)|(?:(?:color(?:-[\w]+)*)\s)|(?:(?:column(?:-[\w]+)+)\s)|(?:(?:columns)\s)|(?:(?:content)\s)|(?:(?:counter-increment)\s)|(?:(?:counter-reset)\s)|(?:(?:crop)\s)|(?:(?:cue-after)\s)|(?:(?:cue-before)\s)|(?:(?:cue)\s)|(?:(?:cursor)\s)|(?:(?:direction)\s)|(?:(?:display(?:-[\w]+)*)\s)|(?:(?:dominant-baseline)\s)|(?:(?:drop-initial(?:-[\w]+)+)\s)|(?:(?:elevation)\s)|(?:(?:empty-cells)\s)|(?:(?:fit(?:-[\w]+)*)\s)|(?:(?:filter)\s)|(?:(?:float(?:-[\w]+)*)\s)|(?:(?:font(?:-[\w]+)*)\s)|(?:(?:grid(?:-[\w]+)+)\s)|(?:(?:group-reset)\s)|(?:(?:hanging-puctuation)\s)|(?:(?:height)\s)|(?:(?:hyphenate(?:-[\w]+)+)\s)|(?:(?:hyphens)\s)|(?:(?:image(?:-[\w]+)+)\s)|(?:(?:ime-mode)\s)|(?:(?:include-source)\s)|(?:(?:inline-box-align)\s)|(?:(?:key-equivalent)\s)|(?:(?:konq_bgpos_x)\s)|(?:(?:konq_bgpos_y)\s)|(?:(?:layer-background-color)\s)|(?:(?:layer-background-image)\s)|(?:(?:layout(?:-[\w]+)+)\s)|(?:(?:left)\s)|(?:(?:letter-spacing)\s)|(?:(?:line(?:-[\w]+)+)\s)|(?:(?:list-style(?:-[\w]+)*)\s)|(?:(?:margin(?:-[\w]+)*)\s)|(?:(?:mark(?:-[\w]+)*)\s)|(?:(?:marks)\s)|(?:(?:marker-offset)\s)|(?:(?:marquee(?:-[\w]+)+)\s)|(?:(?:max-height)\s)|(?:(?:max-width)\s)|(?:(?:min-height)\s)|(?:(?:min-width)\s)|(?:(?:move-to)\s)|(?:(?:nav(?:-[\w]+)+)\s)|(?:(?:opacity)\s)|(?:(?:orphans)\s)|(?:(?:outline(?:-[\w]+)*)\s)|(?:(?:overflow-x)\s)|(?:(?:overflow-y)\s)|(?:(?:overflow)\s)|(?:(?:padding-bottom)\s)|(?:(?:padding-left)\s)|(?:(?:padding-right)\s)|(?:(?:padding-top)\s)|(?:(?:padding)\s)|(?:(?:page(?:-[\w]+)*)\s)|(?:(?:pause-after)\s)|(?:(?:pause-before)\s)|(?:(?:pause)\s)|(?:(?:phonemes)\s)|(?:(?:pitch-range)\s)|(?:(?:pitch)\s)|(?:(?:play-during)\s)|(?:(?:pointer-events)\s)|(?:(?:position)\s)|(?:(?:presentation-level)\s)|(?:(?:punctuation-trim)\s)|(?:(?:perspective(?:-[\w]+)*)\s)|(?:(?:quotes)\s)|(?:(?:rendering-indent)\s)|(?:(?:resize)\s)|(?:(?:richness)\s)|(?:(?:right)\s)|(?:(?:rotation(?:-[\w]+)*)\s)|(?:(?:ruby(?:-[\w]+)+)\s)|(?:(?:scrollbar(?:-[\w]+)+)\s)|(?:(?:speak-header)\s)|(?:(?:speak-numeral)\s)|(?:(?:speak-punctuation)\s)|(?:(?:speak)\s)|(?:(?:speech-rate)\s)|(?:(?:stress)\s)|(?:(?:string-set)\s)|(?:(?:tab-side)\s)|(?:(?:tab-index)\s)|(?:(?:table-layout)\s)|(?:(?:text(?:-[\w]+)+)\s)|(?:(?:toggle-group)\s)|(?:(?:top)\s)|(?:(?:transition(?:-[\w]+)*)\s)|(?:(?:transform(?:-[\w]+)*)\s)|(?:(?:unicode-bidi)\s)|(?:(?:unicode-range)\s)|(?:(?:user(?:-[\w]+)+)\s)|(?:(?:vertical-align)\s)|(?:(?:visibility)\s)|(?:(?:voice(?:-[\w]+)+)\s)|(?:(?:volume)\s)|(?:(?:white-space)\s)|(?:(?:widows)\s)|(?:(?:width)\s)|(?:(?:word(?:-[\w]+)+)\s)|(?:(?:writing-mode)\s)|(?:(?:zoom)\s)|(?:(?:z-index)\s)</regex>
@@ -290,9 +109,10 @@
                     <end>
                         <regex>([\w'-;\]\)\.\s]\v)|([\w'-;\]\)\.\s]\n)|([\w'-;\]\)\.\s]\r)</regex>
                     </end>
-                    <keywords id="CSS Attributes" font-style="normal" color="#9B4400" useforautocomplete="yes">
-                    	<regex>(?i)(-webkit(?:-\w+)+)</regex>
-                    	<regex>(?i)(-moz(?:-\w+)+)</regex>
+-->
+                    <keywords id="CSS Attributes" font-style="normal" color="#783602" useforautocomplete="yes">
+<!--                     	<regex>(?i)(-webkit(?:-\w+)+)</regex> -->
+<!--                     	<regex>(?i)(-moz(?:-\w+)+)</regex> -->
 <!-- STUDIO
                         <regex>(?i)(-webkit-activelink)</regex>
                         <regex>(?i)(-webkit-auto)</regex>
@@ -345,7 +165,7 @@
                         <regex>(?i)(armenian)</regex>
                         <regex>(?i)(auto)</regex>
                         <regex>(?i)(avoid)</regex>
-                        <regex>(?i)(background(?:-\w+)*)</regex>
+<!--                         <regex>(?i)(background(?:-\w+)*)</regex> -->
                         <regex>(?i)(backwards)</regex>
                         <regex>(?i)(balance)</regex>
                         <regex>(?i)(baseline)</regex>
@@ -699,6 +519,212 @@
                         <regex>(?i)(xx-small)</regex>
                         <regex>(?i)(yellow)</regex>
                     </keywords>
+            
+            
+            
+            
+            
+            
+
+        
+<!--           <state id="Inside curly brackets" color="#000" background-color="#fff" font-weight="normal" font-style="normal">
+
+                <begin>
+                    <string>{</string>
+                </begin>
+                <end>
+                    <regex>}</regex>
+                </end>
+-->
+                <keywords id="CSS Keywords" color="#096338" font-style="normal" useforautocomplete="yes">
+
+                    <regex>(?&lt;![\d\w])(?i)(_background)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(_filter)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(-webkit(?:-\w+)+)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(-khtml(?:-\w+)+)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(-moz(?:-\w+)+)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(-o(?:-\w+)+)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(-ms(?:-\w+)+)</regex>
+
+                    <regex>(?&lt;![\d\w])(?i)(accelerator)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(alignment(?:-[\w]+)+)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(animation(?:-[\w]+)*)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(appearance)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(azimuth)</regex>
+           	        <regex>(?&lt;![\d\w])(?i)(background(?:-[\w]+)*)</regex>
+<!-- STUDIO
+                    <regex>(?&lt;![\d\w])(?i)(background-attachment)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(background-color)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(background-image)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(background-position-x)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(background-position-y)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(background-position)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(background-repeat)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(background)</regex>
+-->
+<!-- STUDIO
+                    <regex>(?&lt;![\d\w])(?i)(border-bottom-color)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(border-bottom-style)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(border-bottom-width)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(border-bottom)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(border-collapse)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(border-color)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(border-left-color)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(border-left-style)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(border-left-width)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(border-left)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(border-right-color)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(border-right-style)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(border-right-width)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(border-right)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(border-spacing)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(border-style)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(border-top-color)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(border-top-style)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(border-top-width)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(border-top)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(border-width)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(border)</regex>
+-->
+                    <regex>(?&lt;![\d\w])(?i)(backface-visibility)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(baseline-shift)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(behavior)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(binding)</regex>
+           	        <regex>(?&lt;![\d\w])(?i)(bookmark(?:-[\w]+)+)</regex>
+           	        <regex>(?&lt;![\d\w])(?i)(border(?:-[\w]+)*)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(bottom)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(box-[\w]*)</regex>                    
+                    <regex>(?&lt;![\d\w])(?i)(caption-side)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(clear)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(clip)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(color(?:-[\w]+)*)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(column(?:-[\w]+)+)</regex>                    
+                    <regex>(?&lt;![\d\w])(?i)(columns)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(content)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(counter-increment)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(counter-reset)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(crop)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(cue-after)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(cue-before)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(cue)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(cursor)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(direction)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(display(?:-[\w]+)*)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(dominant-baseline)</regex>                    
+                    <regex>(?&lt;![\d\w])(?i)(drop-initial(?:-[\w]+)+)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(elevation)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(empty-cells)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(fit(?:-[\w]+)*)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(filter)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(float(?:-[\w]+)*)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(font(?:-[\w]+)*)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(grid(?:-[\w]+)+)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(group-reset)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(hanging-puctuation)</regex>                    
+                    <regex>(?&lt;![\d\w])(?i)(height)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(hyphenate(?:-[\w]+)+)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(hyphens)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(icons)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(image(?:-[\w]+)+)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(ime-mode)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(include-source)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(inline-box-align)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(key-equivalent)</regex>                    
+                    <regex>(?&lt;![\d\w])(?i)(konq_bgpos_x)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(konq_bgpos_y)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(layer-background-color)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(layer-background-image)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(layout(?:-[\w]+)+)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(left)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(letter-spacing)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(line(?:-[\w]+)+)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(list-style(?:-[\w]+)*)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(margin(?:-[\w]+)*)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(mark(?:-[\w]+)*)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(marks)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(marker-offset)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(marquee(?:-[\w]+)+)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(max-height)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(max-width)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(min-height)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(min-width)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(move-to)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(nav(?:-[\w]+)+)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(opacity)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(orphans)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(outline(?:-[\w]+)*)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(overflow-x)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(overflow-y)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(overflow)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(padding-bottom)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(padding-left)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(padding-right)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(padding-top)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(padding)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(page(?:-[\w]+)*)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(pause-after)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(pause-before)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(pause)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(phonemes)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(pitch-range)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(pitch)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(play-during)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(pointer-events)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(position)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(presentation-level)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(punctuation-trim)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(perspective(?:-[\w]+)*)</regex>                    
+                    <regex>(?&lt;![\d\w])(?i)(quotes)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(rendering-indent)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(resize)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(rest(?:-[\w]+)*)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(richness)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(right)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(rotation(?:-[\w]+)*)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(ruby(?:-[\w]+)+)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(scrollbar(?:-[\w]+)+)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(size)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(speak-header)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(speak-numeral)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(speak-punctuation)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(speak)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(speech-rate)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(stress)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(string-set)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(tab-side)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(tab-index)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(table-layout)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(text(?:-[\w]+)+)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(toggle-group)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(top)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(transition(?:-[\w]+)*)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(transform(?:-[\w]+)*)</regex>                    
+                    <regex>(?&lt;![\d\w])(?i)(unicode-bidi)</regex>
+                   	<regex>(?&lt;![\d\w])(?i)(unicode-range)</regex>
+                   	<regex>(?&lt;![\d\w])(?i)(user(?:-[\w]+)+)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(vertical-align)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(visibility)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(voice(?:-[\w]+)+)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(volume)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(white-space)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(widows)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(width)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(word(?:-[\w]+)+)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(writing-mode)</regex>
+                	  <regex>(?&lt;![\d\w])(?i)(zoom)</regex>
+                    <regex>(?&lt;![\d\w])(?i)(z-index)</regex>
+                </keywords>
+
+
+
+
+
+
+
+
+
+
+
                     <keywords id="CSS Digits" color="#00f" font-style="normal" useforautocomplete="yes">
                         <regex>(?&lt;![#\d\w-])(-?[\d]+[ \t]*(?:px|pt|em|ex|cm|in|mm|pc|s|ms|Hz|kHz|%|deg|rad|grad|turn)?)</regex>
                     </keywords>
@@ -706,42 +732,39 @@
                         <regex>(#[\da-fA-F]{3,6})</regex> <!-- STUDIO added coloring for anything 3 to 6 characters -->
                         <!--<regex>(#[\da-fA-F]{6})</regex>-->
                     </keywords>
-                    <state-link state="AutodocComment"/>
-                    <state-link state="Comment"/>
+<!--                <state-link state="Comment"/>
                     <state-link state="String"/>
                     <state-link state="SingleString"/>
                     <state-link state="URL"/>
-                    <!--<state-link state="Round bracket"/>-->
+                    <state-link state="Round bracket"/>
                 </state>
-                <state-link state="AutodocComment"/>
                 <state-link state="Comment"/>
                 <state-link state="String"/>
                 <state-link state="SingleString"/>
-				<state-link state="URL"/>
-              <!--  <state-link state="Round bracket"/>-->
-            </state>
+				        <state-link state="URL"/>
+            </state> -->
             
-            <keywords id="Classes" color="#a035a7" font-weight="bold" useforautocomplete="no">
+            <keywords id="Classes" color="#200274" font-weight="bold" useforautocomplete="no">
               <regex>(\.[a-zA-Z\-\_\.]+)+</regex>
             </keywords>
             
-            <keywords id="Ids" color="#a035a7" font-weight="bold" useforautocomplete="no">
+            <keywords id="Ids" color="#200274" font-weight="bold" useforautocomplete="no">
               <regex>(\#[a-zA-Z\-\_\.]+)+</regex>
             </keywords>
 
-            <state id="Comment" color="#3deb41" font-style="italic">
+            <state id="Comment" color="#7ae1ff" font-style="italic">
                 <begin><regex>//</regex></begin>
                 <end><regex>[\n\r]</regex></end>
             </state>
 
-            <state id="Single Comment" color="#3deb41" font-style="italic">
+            <state id="Single Comment" color="#7ae1ff" font-style="italic">
                 <begin><regex>//</regex></begin>
                 <end><regex>[\n\r]</regex></end>
             </state>
             <keywords id="Hex Colors" color="#760f15" useforautocomplete="no">
               <regex>([ \t]+#[\da-fA-F]{3,6})</regex>
             </keywords>
-            <state id="Parenthesis" color="#ed4470" useforautocomplete="no">
+            <state id="Parenthesis" color="#572236" useforautocomplete="no">
                 <begin>
                     <regex>\(</regex>
                 </begin>
